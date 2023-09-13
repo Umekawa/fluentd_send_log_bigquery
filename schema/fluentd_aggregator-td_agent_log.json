@@ -1,0 +1,72 @@
+[
+  {
+    "name": "type",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "msg",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "host",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "message",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "pid",
+    "mode": "NULLABLE",
+    "type": "INTEGER"
+  },
+  {
+    "name": "worker",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "port",
+    "mode": "NULLABLE",
+    "type": "INTEGER"
+  },
+  {
+    "name": "project_id",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "table",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "dataset",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "ppid",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "bind",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "insert_errors",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  },
+  {
+    "name": "reason",
+    "mode": "NULLABLE",
+    "type": "STRING"
+  }
+]
