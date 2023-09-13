@@ -2,71 +2,120 @@
   {
     "name": "type",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "msg",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "host",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "message",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "pid",
     "mode": "NULLABLE",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": null,
+    "fields": []
   },
   {
     "name": "worker",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "port",
     "mode": "NULLABLE",
-    "type": "INTEGER"
+    "type": "INTEGER",
+    "description": null,
+    "fields": []
   },
   {
     "name": "project_id",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "table",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "dataset",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "ppid",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "bind",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "insert_errors",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
   },
   {
     "name": "reason",
     "mode": "NULLABLE",
-    "type": "STRING"
+    "type": "STRING",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "elapsed_time",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "slow_flush_log_threshold",
+    "mode": "NULLABLE",
+    "type": "FLOAT",
+    "description": null,
+    "fields": []
+  },
+  {
+    "name": "plugin_id",
+    "mode": "NULLABLE",
+    "type": "STRING",
+    "description": null,
+    "fields": []
   }
 ]
