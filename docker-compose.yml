@@ -23,9 +23,3 @@ services:
     ports:
       - 24224:24224
       - 24224:24224/udp
-  rake:
-    build: .
-    volumes:
-      - .:/usr/src/app
-    working_dir: /usr/src/app
-    entrypoint: rake
