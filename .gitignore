@@ -1,0 +1,6 @@
+.env
+private_keys/*
+config/*
+
+# To exist folder on git
+!**/.keep
