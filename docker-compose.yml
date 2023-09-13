@@ -1,0 +1,31 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: "docker.{{.Name}}"
+    depends_on:
+      - fluentd
+  fluentd:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config:/fluentd/etc
+      - ./schema:/fluentd/schema
+      - ./private_keys:/fluentd/private_keys
+    ports:
+      - 24224:24224
+      - 24224:24224/udp
+  rake:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    entrypoint: rake
