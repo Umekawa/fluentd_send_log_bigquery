@@ -54,3 +54,7 @@ docker compose build
 ```sh
 docker compose up -d
 ```
+
+### 5. アクセスする
+
+curl localhost:24224
