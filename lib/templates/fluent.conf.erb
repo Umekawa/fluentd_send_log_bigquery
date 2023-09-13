@@ -6,10 +6,12 @@
   @type stdout
 </match>
 
-<match fluent.**>
-  type record_modifier
-  tag internal.message
-</match>
+<label @FLUENT_LOG>
+  <match fluent.**>
+    @type record_modifier
+    tag internal.message
+  </match>
+</label>
 
 <match internal.message>
   @type copy
@@ -24,12 +26,13 @@
     location <%= @location %>
     table <%= @table %>
     schema_path /fluentd/schema/fluentd_aggregator-td_agent_log.json
-    buffer_chunk_records_limit 300
+    ignore_unknown_values true
 
     <buffer>
+      chunk_limit_records 300
       flush_interval 60s
-      flush_thread_interval 0.01
       flush_thread_burst_interval 0.05
+      flush_thread_interval 0.01
       chunk_limit_size 128m
       flush_thread_count 10
     </buffer>
