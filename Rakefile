@@ -12,7 +12,8 @@ task :create_conf do
   @project_id = ENV.fetch('PROJECT_ID', nil)
   @dataset = ENV.fetch('DATASET', nil)
   @location = ENV.fetch('LOCATION', nil)
-  @table = ENV.fetch('TABLE', nil)
+  @docker_table = ENV.fetch('DOCKER_TABLE', nil)
+  @td_agent_table = ENV.fetch('TD_AGENT_TABLE', nil)
   filename = 'config/fluent.conf'
   File.write(filename, erb.result)
 end

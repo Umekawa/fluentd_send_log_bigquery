@@ -9,6 +9,7 @@ services:
       options:
         fluentd-address: localhost:24224
         tag: "docker.{{.Name}}"
+        fluentd-async-connect: "true"
     depends_on:
       - fluentd
   fluentd:

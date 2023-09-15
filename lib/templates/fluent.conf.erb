@@ -3,8 +3,37 @@
 </source>
 
 <match docker.**>
-  @type stdout
+  @type record_modifier
+  tag bigquery.docker
 </match>
+
+<match bigquery.docker>
+  @type copy
+  <store>
+    @type bigquery_insert
+    @id docker-log-bigquery
+
+    auth_method json_key
+    json_key /fluentd/private_keys/<%= @json_key_filename %>
+    project <%= @project_id %>
+    dataset <%= @dataset %>
+    location <%= @location %>
+    table <%= @docker_table %>
+    schema_path /fluentd/schema/fluentd-docker_log.json
+    ignore_unknown_values true
+    add_insert_timestamp log_timestamp
+
+    <buffer>
+      chunk_limit_records 300
+      flush_interval 60s
+      flush_thread_burst_interval 0.05
+      flush_thread_interval 0.01
+      chunk_limit_size 128m
+      flush_thread_count 10
+    </buffer>
+  </store>
+</match>
+
 
 <label @FLUENT_LOG>
   <match fluent.**>
@@ -24,9 +53,10 @@
     project <%= @project_id %>
     dataset <%= @dataset %>
     location <%= @location %>
-    table <%= @table %>
-    schema_path /fluentd/schema/fluentd_aggregator-td_agent_log.json
+    table <%= @td_agent_table %>
+    schema_path /fluentd/schema/fluentd-td_agent_log.json
     ignore_unknown_values true
+    add_insert_timestamp log_timestamp
 
     <buffer>
       chunk_limit_records 300
