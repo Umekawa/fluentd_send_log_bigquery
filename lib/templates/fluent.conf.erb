@@ -40,9 +40,8 @@
     @type record_modifier
     tag internal.message
   </match>
-</label>
 
-<match internal.message>
+  <match internal.message>
   @type copy
   <store>
     @type bigquery_insert
@@ -68,3 +67,4 @@
     </buffer>
   </store>
 </match>
+</label>

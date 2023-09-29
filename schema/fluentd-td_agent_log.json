@@ -100,7 +100,7 @@
   {
     "name": "elapsed_time",
     "mode": "NULLABLE",
-    "type": "float",
+    "type": "TIME",
     "description": null,
     "fields": []
   },
@@ -121,7 +121,7 @@
   {
     "name": "log_timestamp",
     "mode": "NULLABLE",
-    "type": "TIME",
+    "type": "TIMESTAMP",
     "description": null,
     "fields": []
   }
